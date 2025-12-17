@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Debug: SnapCharts (Simulator)",
+    "adapter": "Swift",
+    "request": "attach",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "build": {
+      "command": "sh",
+      "args": [
+        "-c",
+        "set -e && \\\nBUILD_DIR=$(xcodebuild -project '/Users/williamspiegel/Documents/nativeIOSApps/SnapCharts/SnapCharts.xcodeproj' -scheme 'SnapCharts' -destination 'id=E74C2902-99ED-4E09-A7A6-A49216CDA03E' -showBuildSettings 2>/dev/null | grep -m1 'BUILT_PRODUCTS_DIR' | sed 's/.*= //') && \\\nAPP_NAME=$(xcodebuild -project '/Users/williamspiegel/Documents/nativeIOSApps/SnapCharts/SnapCharts.xcodeproj' -scheme 'SnapCharts' -destination 'id=E74C2902-99ED-4E09-A7A6-A49216CDA03E' -showBuildSettings 2>/dev/null | grep -m1 'FULL_PRODUCT_NAME' | sed 's/.*= //') && \\\nBUNDLE_ID=$(xcodebuild -project '/Users/williamspiegel/Documents/nativeIOSApps/SnapCharts/SnapCharts.xcodeproj' -scheme 'SnapCharts' -destination 'id=E74C2902-99ED-4E09-A7A6-A49216CDA03E' -showBuildSettings 2>/dev/null | grep -m1 'PRODUCT_BUNDLE_IDENTIFIER' | sed 's/.*= //') && \\\necho \"🔨 Building SnapCharts...\" && \\\n(xcodebuild -project '/Users/williamspiegel/Documents/nativeIOSApps/SnapCharts/SnapCharts.xcodeproj' -scheme 'SnapCharts' -destination 'id=E74C2902-99ED-4E09-A7A6-A49216CDA03E' build 2>&1 | xcbeautify || xcodebuild -project '/Users/williamspiegel/Documents/nativeIOSApps/SnapCharts/SnapCharts.xcodeproj' -scheme 'SnapCharts' -destination 'id=E74C2902-99ED-4E09-A7A6-A49216CDA03E' build) && \\\necho \"📲 Installing on simulator...\" && \\\nxcrun simctl install 'E74C2902-99ED-4E09-A7A6-A49216CDA03E' \"$BUILD_DIR/$APP_NAME\" && \\\necho \"🚀 Launching $BUNDLE_ID for debugging...\" && \\\nxcrun simctl launch --wait-for-debugger 'E74C2902-99ED-4E09-A7A6-A49216CDA03E' \"$BUNDLE_ID\" && \\\necho \"Bundle ID: $BUNDLE_ID\""
+      ]
+    },
+    "attachCommands": [
+      "process attach --name SnapCharts --waitfor"
+    ]
+  },
+  {
+    "label": "Attach: SnapCharts (Running)",
+    "adapter": "Swift",
+    "request": "attach",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "attachCommands": [
+      "process attach --name SnapCharts"
+    ]
+  }
+]
