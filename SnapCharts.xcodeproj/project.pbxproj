@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		03E662E52083F700D2DA0F17 /* Pods_SnapChartsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEF2501518E5880C8B14FD7 /* Pods_SnapChartsTests.framework */; };
+		44B735CEB22BB6525B3E9FE4 /* Pods_SnapCharts_SnapChartsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DCDFBDDC395E0A724E34C6 /* Pods_SnapCharts_SnapChartsUITests.framework */; };
+		B795237C51114A8ECF2AB0BD /* Pods_SnapCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DB10B02D625ECE231220EA /* Pods_SnapCharts.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E6A7DEEC2EF3773B00C31ED5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0301D714557ED620BF74AC45 /* Pods-SnapChartsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapChartsTests.debug.xcconfig"; path = "Target Support Files/Pods-SnapChartsTests/Pods-SnapChartsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4FEF2501518E5880C8B14FD7 /* Pods_SnapChartsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapChartsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		717F9E5795AD71CDE7C285AB /* Pods-SnapCharts-SnapChartsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapCharts-SnapChartsUITests.release.xcconfig"; path = "Target Support Files/Pods-SnapCharts-SnapChartsUITests/Pods-SnapCharts-SnapChartsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		81E89658BB03BD568CA3A336 /* Pods-SnapCharts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapCharts.release.xcconfig"; path = "Target Support Files/Pods-SnapCharts/Pods-SnapCharts.release.xcconfig"; sourceTree = "<group>"; };
+		87DCDFBDDC395E0A724E34C6 /* Pods_SnapCharts_SnapChartsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapCharts_SnapChartsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69CCAB4C04603B5C2BF5C51 /* Pods-SnapChartsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapChartsTests.release.xcconfig"; path = "Target Support Files/Pods-SnapChartsTests/Pods-SnapChartsTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7DB10B02D625ECE231220EA /* Pods_SnapCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A7DED92EF3773900C31ED5 /* SnapCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A7DEEB2EF3773B00C31ED5 /* SnapChartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapChartsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A7DEF52EF3773B00C31ED5 /* SnapChartsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapChartsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF08FCD95B4910853E0E586D /* Pods-SnapCharts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapCharts.debug.xcconfig"; path = "Target Support Files/Pods-SnapCharts/Pods-SnapCharts.debug.xcconfig"; sourceTree = "<group>"; };
+		F2D246451786CF51A46B1074 /* Pods-SnapCharts-SnapChartsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapCharts-SnapChartsUITests.debug.xcconfig"; path = "Target Support Files/Pods-SnapCharts-SnapChartsUITests/Pods-SnapCharts-SnapChartsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B795237C51114A8ECF2AB0BD /* Pods_SnapCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E662E52083F700D2DA0F17 /* Pods_SnapChartsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +83,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B735CEB22BB6525B3E9FE4 /* Pods_SnapCharts_SnapChartsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3658B4EDD0A6654091D21464 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF08FCD95B4910853E0E586D /* Pods-SnapCharts.debug.xcconfig */,
+				81E89658BB03BD568CA3A336 /* Pods-SnapCharts.release.xcconfig */,
+				F2D246451786CF51A46B1074 /* Pods-SnapCharts-SnapChartsUITests.debug.xcconfig */,
+				717F9E5795AD71CDE7C285AB /* Pods-SnapCharts-SnapChartsUITests.release.xcconfig */,
+				0301D714557ED620BF74AC45 /* Pods-SnapChartsTests.debug.xcconfig */,
+				A69CCAB4C04603B5C2BF5C51 /* Pods-SnapChartsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3AB2CE07B2CFE11C0AEDE31B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7DB10B02D625ECE231220EA /* Pods_SnapCharts.framework */,
+				87DCDFBDDC395E0A724E34C6 /* Pods_SnapCharts_SnapChartsUITests.framework */,
+				4FEF2501518E5880C8B14FD7 /* Pods_SnapChartsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E6A7DED02EF3773900C31ED5 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +120,8 @@
 				E6A7DEEE2EF3773B00C31ED5 /* SnapChartsTests */,
 				E6A7DEF82EF3773B00C31ED5 /* SnapChartsUITests */,
 				E6A7DEDA2EF3773900C31ED5 /* Products */,
+				3658B4EDD0A6654091D21464 /* Pods */,
+				3AB2CE07B2CFE11C0AEDE31B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6A7DEFF2EF3773B00C31ED5 /* Build configuration list for PBXNativeTarget "SnapCharts" */;
 			buildPhases = (
+				12106A454B8F8427D3D70FC8 /* [CP] Check Pods Manifest.lock */,
 				E6A7DED52EF3773900C31ED5 /* Sources */,
 				E6A7DED62EF3773900C31ED5 /* Frameworks */,
 				E6A7DED72EF3773900C31ED5 /* Resources */,
+				32292C87AAF1654CDB34FBA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,8 +156,6 @@
 				E6A7DEDB2EF3773900C31ED5 /* SnapCharts */,
 			);
 			name = SnapCharts;
-			packageProductDependencies = (
-			);
 			productName = SnapCharts;
 			productReference = E6A7DED92EF3773900C31ED5 /* SnapCharts.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +164,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6A7DF022EF3773B00C31ED5 /* Build configuration list for PBXNativeTarget "SnapChartsTests" */;
 			buildPhases = (
+				607273311A90D7CA145DD3EF /* [CP] Check Pods Manifest.lock */,
 				E6A7DEE72EF3773B00C31ED5 /* Sources */,
 				E6A7DEE82EF3773B00C31ED5 /* Frameworks */,
 				E6A7DEE92EF3773B00C31ED5 /* Resources */,
@@ -134,8 +178,6 @@
 				E6A7DEEE2EF3773B00C31ED5 /* SnapChartsTests */,
 			);
 			name = SnapChartsTests;
-			packageProductDependencies = (
-			);
 			productName = SnapChartsTests;
 			productReference = E6A7DEEB2EF3773B00C31ED5 /* SnapChartsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -144,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6A7DF052EF3773B00C31ED5 /* Build configuration list for PBXNativeTarget "SnapChartsUITests" */;
 			buildPhases = (
+				0995F281346EF23BA67A9443 /* [CP] Check Pods Manifest.lock */,
 				E6A7DEF12EF3773B00C31ED5 /* Sources */,
 				E6A7DEF22EF3773B00C31ED5 /* Frameworks */,
 				E6A7DEF32EF3773B00C31ED5 /* Resources */,
+				E5AA19BC52815A5A29C9FE38 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,8 +201,6 @@
 				E6A7DEF82EF3773B00C31ED5 /* SnapChartsUITests */,
 			);
 			name = SnapChartsUITests;
-			packageProductDependencies = (
-			);
 			productName = SnapChartsUITests;
 			productReference = E6A7DEF52EF3773B00C31ED5 /* SnapChartsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -230,6 +272,117 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0995F281346EF23BA67A9443 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapCharts-SnapChartsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12106A454B8F8427D3D70FC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapCharts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32292C87AAF1654CDB34FBA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnapCharts/Pods-SnapCharts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnapCharts/Pods-SnapCharts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SnapCharts/Pods-SnapCharts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		607273311A90D7CA145DD3EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapChartsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5AA19BC52815A5A29C9FE38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnapCharts-SnapChartsUITests/Pods-SnapCharts-SnapChartsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnapCharts-SnapChartsUITests/Pods-SnapCharts-SnapChartsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SnapCharts-SnapChartsUITests/Pods-SnapCharts-SnapChartsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E6A7DED52EF3773900C31ED5 /* Sources */ = {
@@ -307,7 +460,7 @@
 				DEVELOPMENT_TEAM = 6NP873845S;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -371,7 +524,7 @@
 				DEVELOPMENT_TEAM = 6NP873845S;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -392,13 +545,14 @@
 		};
 		E6A7DF002EF3773B00C31ED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF08FCD95B4910853E0E586D /* Pods-SnapCharts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NP873845S;
-				ENABLE_PREVIEWS = YES;
+				ENABLE_PREVIEWS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -424,13 +578,14 @@
 		};
 		E6A7DF012EF3773B00C31ED5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81E89658BB03BD568CA3A336 /* Pods-SnapCharts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NP873845S;
-				ENABLE_PREVIEWS = YES;
+				ENABLE_PREVIEWS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -456,6 +611,7 @@
 		};
 		E6A7DF032EF3773B00C31ED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0301D714557ED620BF74AC45 /* Pods-SnapChartsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -478,6 +634,7 @@
 		};
 		E6A7DF042EF3773B00C31ED5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A69CCAB4C04603B5C2BF5C51 /* Pods-SnapChartsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -500,6 +657,7 @@
 		};
 		E6A7DF062EF3773B00C31ED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2D246451786CF51A46B1074 /* Pods-SnapCharts-SnapChartsUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -520,6 +678,7 @@
 		};
 		E6A7DF072EF3773B00C31ED5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 717F9E5795AD71CDE7C285AB /* Pods-SnapCharts-SnapChartsUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
