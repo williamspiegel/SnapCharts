@@ -53,12 +53,19 @@ class StockDetailViewModel: ObservableObject {
     @Published var bars: [StockBar] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
+    @Published var selectedRange: String = "1mo"
     
-    func loadBars(symbol: String) async {
+    func loadBars(symbol: String, range: String? = nil) async {
+        let rangeToUse = range ?? selectedRange
+        // Update selectedRange if a specific one was passed
+        if let range = range {
+            self.selectedRange = range
+        }
+        
         isLoading = true
         errorMessage = nil
         do {
-            let fetchedBars = try await YahooFinanceService.shared.getBars(symbol: symbol)
+            let fetchedBars = try await YahooFinanceService.shared.getBars(symbol: symbol, range: rangeToUse)
             self.bars = fetchedBars
         } catch {
             self.errorMessage = "Failed to load chart: \(error.localizedDescription)"

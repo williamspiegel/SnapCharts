@@ -42,8 +42,37 @@ struct StockDetailView: View {
             } else if viewModel.bars.isEmpty {
                 Text("No data available for \(symbol)")
             } else {
+                if let lastBar = viewModel.bars.last {
+                    VStack(alignment: .leading) {
+                        Text(String(format: "$%.2f", lastBar.c))
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        Text("Current Price")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.top)
+                }
+                
                 StockChart(bars: viewModel.bars)
                     .frame(maxHeight: .infinity)
+            }
+            
+            // Range Picker
+            Picker("Range", selection: $viewModel.selectedRange) {
+                Text("1D").tag("1d")
+                Text("1W").tag("5d")
+                Text("1M").tag("1mo")
+                Text("3M").tag("3mo")
+                Text("1Y").tag("1y")
+                Text("All").tag("max")
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            .onChange(of: viewModel.selectedRange) { newRange in
+                Task {
+                    await viewModel.loadBars(symbol: symbol, range: newRange)
+                }
             }
         }
         .navigationTitle(symbol)
@@ -58,6 +87,7 @@ struct StockDetailView: View {
             }
         }
         .task {
+            // Initial load using default range or whatever is in viewModel
             await viewModel.loadBars(symbol: symbol)
         }
     }

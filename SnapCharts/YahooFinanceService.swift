@@ -103,10 +103,9 @@ class YahooFinanceService: ObservableObject {
     /// Fetches historical data (OHLCV) for a given symbol.
     /// - Parameters:
     ///   - symbol: The stock ticker (e.g., "AAPL").
-    ///   - timeframe: The interval (e.g., "1Day", "1Hour"). Defaults to "1Day".
-    ///   - limit: Approximate number of bars to fetch (maps to range).
-    func getBars(symbol: String, timeframe: String = "1Day", limit: Int = 100) async throws -> [StockBar] {
-        let (interval, range) = mapTimeframeToYahoo(timeframe: timeframe, limit: limit)
+    ///   - range: The range of data to fetch (e.g., "1d", "5d", "1mo", "1y", "max"). Defaults to "1mo".
+    func getBars(symbol: String, range: String = "1mo") async throws -> [StockBar] {
+        let interval = getIntervalForRange(range)
         
         // URL: https://query1.finance.yahoo.com/v8/finance/chart/{symbol}
         var components = URLComponents(string: "https://query1.finance.yahoo.com/v8/finance/chart/\(symbol)")
@@ -178,31 +177,21 @@ class YahooFinanceService: ObservableObject {
     
     // MARK: - Helpers
     
-    private func mapTimeframeToYahoo(timeframe: String, limit: Int) -> (interval: String, range: String) {
-        // Simple mapping logic
-        // "1Day", "1Hour", "15Min" -> Yahoo: "1d", "60m", "15m"
-        // Range depends on the limit.
-        
-        let interval: String
-        let range: String
-        
-        switch timeframe {
-        case "1Day":
-            interval = "1d"
-            range = "1y" // Default to 1 year for daily
-        case "1Hour":
-            interval = "60m"
-            range = "3mo"
-        case "15Min":
-            interval = "15m"
-            range = "1mo"
-        default:
-            interval = "1d"
-            range = "1y"
+    private func getIntervalForRange(_ range: String) -> String {
+        switch range {
+        case "1d": return "5m"
+        case "5d": return "15m"
+        case "1mo": return "90m" // or 1d
+        case "3mo": return "1d"
+        case "6mo": return "1d"
+        case "1y": return "1d"
+        case "2y": return "1wk"
+        case "5y": return "1wk"
+        case "10y": return "1mo"
+        case "ytd": return "1d"
+        case "max": return "3mo"
+        default: return "1d"
         }
-        
-        // If limit is very small, we could adjust range, but Yahoo's ranges are predefined (1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd, max)
-        return (interval, range)
     }
     
     private func parseYahooResultToStockBars(_ result: YahooChartResult) -> [StockBar] {
