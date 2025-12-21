@@ -12,8 +12,8 @@
 	"argv": [
 		"/opt/homebrew/bin/xcode-build-server"
 	],
-	"workspace": "/Users/williamspiegel/Documents/nativeIOSApps/SnapCharts/SnapCharts.xcodeproj/project.xcworkspace",
-	"build_root": "/Users/williamspiegel/Library/Developer/Xcode/DerivedData/SnapCharts-affcfofvnpfzuwedolgkbzfxsrqv",
+	"workspace": "/Users/williamspiegel/Documents/nativeIOSApps/SnapCharts/SnapCharts.xcworkspace",
+	"build_root": "/Users/williamspiegel/Library/Developer/Xcode/DerivedData/SnapCharts-amtvvslizocpoodarsgxovhlwkfy",
 	"scheme": "SnapCharts",
 	"kind": "xcode"
 }
