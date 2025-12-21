@@ -34,16 +34,35 @@ struct StockDetailView: View {
     
     var body: some View {
         VStack {
+            // Header: Company Name & Symbol
+            VStack(spacing: 5) {
+                Text(name ?? symbol)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                Text(symbol)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.secondary)
+            }
+            .padding(.top)
+
             if viewModel.isLoading {
+                Spacer()
                 ProgressView("Loading Chart...")
+                Spacer()
             } else if let error = viewModel.errorMessage {
+                Spacer()
                 Text(error)
                     .foregroundColor(.red)
+                Spacer()
             } else if viewModel.bars.isEmpty {
+                Spacer()
                 Text("No data available for \(symbol)")
+                Spacer()
             } else {
                 if let lastBar = viewModel.bars.last {
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .center) {
                         Text(String(format: "$%.2f", lastBar.c))
                             .font(.largeTitle)
                             .fontWeight(.bold)
@@ -75,7 +94,7 @@ struct StockDetailView: View {
                 }
             }
         }
-        .navigationTitle(symbol)
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
