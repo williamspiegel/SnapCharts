@@ -14,6 +14,7 @@ struct StockDetailView: View {
     
     @StateObject private var viewModel = StockDetailViewModel()
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var selectedBar: StockBar?
     
     // We use a FetchRequest just to monitor changes for the heart icon updates
     @FetchRequest var favorites: FetchedResults<SavedStock>
@@ -62,18 +63,35 @@ struct StockDetailView: View {
                 Spacer()
             } else {
                 if let lastBar = viewModel.bars.last {
+                    let displayBar = selectedBar ?? lastBar
                     VStack(alignment: .center) {
-                        Text(String(format: "$%.2f", lastBar.c))
+                        Text(String(format: "$%.2f", displayBar.c))
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                        Text("Current Price")
+                        
+                        if let selected = selectedBar {
+                            Text("Price at \(formatDate(selected.t))")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            
+                            HStack(spacing: 12) {
+                                Text("O: \(String(format: "%.2f", selected.o))")
+                                Text("H: \(String(format: "%.2f", selected.h))")
+                                Text("L: \(String(format: "%.2f", selected.l))")
+                            }
                             .font(.caption)
                             .foregroundColor(.secondary)
+                            .padding(.top, 4)
+                        } else {
+                            Text("Current Price")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
                     }
                     .padding(.top)
                 }
                 
-                StockChart(bars: viewModel.bars)
+                StockChart(bars: viewModel.bars, selectedBar: $selectedBar)
                     .frame(maxHeight: .infinity)
             }
             
@@ -109,5 +127,11 @@ struct StockDetailView: View {
             // Initial load using default range or whatever is in viewModel
             await viewModel.loadBars(symbol: symbol)
         }
+    }
+    
+    private func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd HH:mm"
+        return formatter.string(from: date)
     }
 }

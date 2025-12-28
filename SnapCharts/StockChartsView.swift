@@ -10,9 +10,15 @@ import DGCharts
 
 struct StockChart: UIViewRepresentable {
     let bars: [StockBar]
+    @Binding var selectedBar: StockBar?
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
     
     func makeUIView(context: Context) -> DGCharts.CandleStickChartView {
         let chartView = DGCharts.CandleStickChartView()
+        chartView.delegate = context.coordinator
         chartView.dragEnabled = true
         chartView.setScaleEnabled(true)
         chartView.pinchZoomEnabled = true
@@ -62,6 +68,29 @@ struct StockChart: UIViewRepresentable {
         let data = CandleChartData(dataSet: dataSet)
         uiView.data = data
         uiView.notifyDataSetChanged()
+    }
+    
+    class Coordinator: NSObject, ChartViewDelegate {
+        var parent: StockChart
+        
+        init(_ parent: StockChart) {
+            self.parent = parent
+        }
+        
+        func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+            let index = Int(entry.x)
+            if index >= 0 && index < parent.bars.count {
+                DispatchQueue.main.async {
+                    self.parent.selectedBar = self.parent.bars[index]
+                }
+            }
+        }
+        
+        func chartValueNothingSelected(_ chartView: ChartViewBase) {
+            DispatchQueue.main.async {
+                self.parent.selectedBar = nil
+            }
+        }
     }
     
     class DateValueFormatter: AxisValueFormatter {
